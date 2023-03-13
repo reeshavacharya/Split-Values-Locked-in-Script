@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@blockfrost/blockfrost-js": "^5.2.0",
+    "@martifylabs/mesh": "^1.2.0-beta.4",
+    "@martifylabs/mesh-react": "^1.1.1",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
