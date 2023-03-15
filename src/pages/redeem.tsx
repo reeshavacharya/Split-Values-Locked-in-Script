@@ -88,7 +88,7 @@ const Redeem: NextPage = () =>{
             <h3>Are you sure you want to redeem?</h3>
              current script value is : 
              <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-                <ContractValue/> <p style={{color:'blue'}}>ADA</p>    
+                <ContractValue/> <h3 style={{color:'blue'}}>₳</h3>    
              </div>
             <div style={{display:'flex',paddingTop:'12px'}}>
                 <button color="Green" style={{width:'80px', height:'30px', margin:'10px'}} onClick={async()=>{

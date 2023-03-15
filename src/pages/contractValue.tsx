@@ -17,7 +17,7 @@ const ContractValue: NextPage = (props) =>{
       {Ada !== null ? (
         <h3 id="my-value" style={{color: 'yellow'}}>{JSON.parse(JSON.stringify(Ada)).value}</h3>
       ) : (
-        <p style={{color: 'yellow'}}>Loading...</p>
+        <p></p>
       )}
     </div>
     );
