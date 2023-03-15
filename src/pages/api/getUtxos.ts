@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
-import { it } from 'node:test';
 
 type Data ={
     utxos: any
@@ -8,7 +7,7 @@ type Data ={
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {    
     try {
-        let json = await getUtxos("addr_test1wpuxaj2hl67ete0nchuenhc4utmuevep2umnn7ajm0xdfnsmquxcs")
+        let json = await getUtxos("addr_test1wp34y3rwkf5wgfc32wcwguvlr3wzr9fhj5hw6sk0mul9k5q4pr369")
         let utxos =JSON.parse( JSON.stringify(json))
         res.status(200).json({utxos});
     } catch (error) {
@@ -27,28 +26,14 @@ export async function getUtxos(address: string){
         projectId : "previewE4fbR7220pwxt57EUS5zUybTBU6vlnPT",
      });
      let addressData = await API.addressesUtxos(address)
-
-     let txAmount = addressData.map(hash => hash.amount)
-
-     txAmount.forEach((arr)=>{
-        arr.forEach((item)=>{
-            if(item.unit== "lovelace"){
-                sum+=parseInt(item.quantity)
-            }
-        })
-     })
-
+          
      return addressData.filter((tx) => {
         return tx.amount.some((amt) => amt.unit === "lovelace");
       }).map((tx) => {
         const lovelaceAmt = tx.amount.find((amt) => amt.unit === "lovelace");
         return {
-          tx_hash: tx.tx_hash,
-          tx_index: tx.tx_index,
-          quantity: lovelaceAmt?.quantity || "0",
+          tx_hash: tx.tx_hash+"#"+tx.tx_index,
         };
       });
-
-    //  return sum/1000000
 }
 

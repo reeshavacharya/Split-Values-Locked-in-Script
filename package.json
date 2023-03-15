@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@blockfrost/blockfrost-js": "^5.2.0",
+    "@emurgo/cardano-serialization-lib-asmjs": "^11.3.0",
     "@martifylabs/mesh": "^1.2.0-beta.4",
     "@martifylabs/mesh-react": "^1.1.1",
     "@types/node": "18.15.0",

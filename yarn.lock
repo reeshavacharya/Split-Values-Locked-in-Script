@@ -187,6 +187,11 @@
   resolved "https://registry.yarnpkg.com/@emurgo/cardano-message-signing-nodejs/-/cardano-message-signing-nodejs-1.0.1.tgz#b2fa1f7541055a6c4b8e805492b1a9362bea5835"
   integrity sha512-PoKh1tQnJX18f8iEr8Jk1KXxKCn9eqaSslMI1pyOJvYRJhQVDLCh0+9YReufjp0oFJIY1ShcrR+4/WnECVZUKQ==
 
+"@emurgo/cardano-serialization-lib-asmjs@^11.3.0":
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-asmjs/-/cardano-serialization-lib-asmjs-11.3.0.tgz#332e67955ca93531407788a501b545faef76f4f8"
+  integrity sha512-81KVs/LitQF7WVeCe9FdFDaUSynZtyK7iqXToTpgiHOi/VVyEn9OkvU5WOzTehl6DfOwU1dx1xGopZsVqslZWw==
+
 "@emurgo/cardano-serialization-lib-browser@11.1.1":
   version "11.1.1"
   resolved "https://registry.yarnpkg.com/@emurgo/cardano-serialization-lib-browser/-/cardano-serialization-lib-browser-11.1.1.tgz#1621c1ff657a49f9731e8046ed7d7952f9064ce8"
