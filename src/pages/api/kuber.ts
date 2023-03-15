@@ -4,7 +4,6 @@ import {
 } from '@emurgo/cardano-serialization-lib-asmjs';
 
 export async function kuber(json:any) {  
-    console.log(json) 
     const config: AxiosRequestConfig= {
       method: 'post', 
       url: 'https://preview.kuberide.com/api/v1/tx',
