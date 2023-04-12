@@ -62,24 +62,24 @@ const Redeem: NextPage = () =>{
               ],
             "inputs": inputs
         };
-        return callKuberAndSubmit(wallet.instance as any,'https://preview.kuberide.com', JSON.stringify(body) )
-        // return kuber.buildWithProvider(await wallet, {
-        //     "outputs": [
-        //         {
-        //           "address": "addr_test1qpap2yl48xr0ar6je29dm4y28y8dkmxlg97hku3vyfhftzprkwpajej8f9xuarfzz4uhgez0j6xd8jqf8xwg2lz2mewqvurvgd",
-        //           "value": (value*1000000)/2
-        //         },
-        //         {
-        //           "address": "addr_test1qplrdfxgm2wxl74ggttfgvkrqz9hdht6xwq3r326h62cmn989k5m8uprgt299v2080aga7uqqkutycf97stwtskk40nskerus4",
-        //           "value": (value*1000000)/2
-        //         }
-        //       ],
-        //     "inputs": inputs
-        // }).then(async tx=>{    
-        //     (await wallet).signAndSubmit(tx)
-        // }).catch(e=>{
-        //     window.alert((e && e.message) || e)
-        // })
+        // return callKuberAndSubmit(wallet.instance as any,'https://preview.kuberide.com', JSON.stringify(body) )
+        return kuber.buildWithProvider(await wallet, {
+            "outputs": [
+                {
+                  "address": "addr_test1qpap2yl48xr0ar6je29dm4y28y8dkmxlg97hku3vyfhftzprkwpajej8f9xuarfzz4uhgez0j6xd8jqf8xwg2lz2mewqvurvgd",
+                  "value": (value*1000000)/2
+                },
+                {
+                  "address": "addr_test1qplrdfxgm2wxl74ggttfgvkrqz9hdht6xwq3r326h62cmn989k5m8uprgt299v2080aga7uqqkutycf97stwtskk40nskerus4",
+                  "value": (value*1000000)/2
+                }
+              ],
+            "inputs": inputs
+        }).then(async tx=>{    
+            (await wallet).signAndSubmit(tx)
+        }).catch(e=>{
+            window.alert((e && e.message) || e)
+        })
         } 
         catch(error){
             window.alert(error)
